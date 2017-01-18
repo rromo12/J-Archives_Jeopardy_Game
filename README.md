@@ -4,7 +4,9 @@ Scrapes j-Archives providing a more polished interface to view old jeopardy game
 #Usage:
 
 1.) Download and unzip Jeopardy V0.1.zip
+
 2.) Run Jeopardy.exe
+
 3.) (If you will not be using this offline skip to 4) Select "Scrape J-Archives" and "Download" at the time of writing there are ~5400    games. After downloading is complete click "Scrape". Upon completion of scrape restart the program.
 
 4.)To load a game:
