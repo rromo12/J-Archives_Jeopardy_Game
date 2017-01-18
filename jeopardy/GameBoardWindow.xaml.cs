@@ -160,21 +160,22 @@ namespace jeopardy
         public void FJ_Click(object sender, RoutedEventArgs e)
         {
             Button b = (Button)sender;
+            TextBlock t = (TextBlock)b.Content;
             if(CurrentGame.FJ_category == "")
             {
-                b.Content = "This Game Does Not Include a Final Jeopardy Clue!";
+                t.Text = "This Game Does Not Include a Final Jeopardy Clue!";
             }
-            if((string)b.Content == CurrentGame.FJ_category.ToUpper())
+            if((string)t.Text == CurrentGame.FJ_category.ToUpper())
             {
-                b.Content = WebUtility.HtmlDecode(CurrentGame.final_jeopardy.Clue_Text.ToUpper());
+                t.Text = WebUtility.HtmlDecode(CurrentGame.final_jeopardy.Clue_Text.ToUpper());
             }
-            else if((string)b.Content == CurrentGame.final_jeopardy.Clue_Text.ToUpper())
+            else if((string)t.Text == CurrentGame.final_jeopardy.Clue_Text.ToUpper())
             {
-                b.Content = WebUtility.HtmlDecode(CurrentGame.final_jeopardy.Clue_Answer.ToUpper());
+                t.Text  = WebUtility.HtmlDecode(CurrentGame.final_jeopardy.Clue_Answer.ToUpper());
             }
             else
             {
-                b.Content = WebUtility.HtmlDecode(CurrentGame.FJ_category.ToUpper());
+                t.Text = WebUtility.HtmlDecode(CurrentGame.FJ_category.ToUpper());
             }
 
         }
