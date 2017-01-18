@@ -1,0 +1,168 @@
+﻿<Window x:Class="jeopardy.GameBoardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jeopardy"
+        mc:Ignorable="d"
+        Title="Jeopardy!" WindowState="Maximized">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+
+                    <MenuItem Header="_New Random Game" Click="Random_Game"/>
+                    <MenuItem Header="_New Game (Id)" Click="ID_Game"/>
+                    <MenuItem Header="_Load Custom Game" Click="MenuItem_Click"/>
+                    <MenuItem Header="_Close" Click="Close"/>
+                </MenuItem>
+                <MenuItem Header="_Round">
+                    <MenuItem Header="_Jeopardy" Click="RoundOne"/>
+                    <MenuItem Header="_Double Jeopardy" Click="RoundTwo"/>
+                    <MenuItem Header="_Final Jeopardy" Click="RoundThree"/>
+                </MenuItem>
+
+            </Menu>
+
+        </DockPanel>
+
+        <Grid x:Name="ClueBoard" Margin="0,20,0,0" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="Category_1" Grid.Row="0" Grid.Column="0" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat1Clue1" Grid.Row="1" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9"  SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat1Clue2" Grid.Row="2" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat1Clue3" Grid.Row="3" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat1Clue4" Grid.Row="4" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat1Clue5" Grid.Row="5" Grid.Column="0" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+            <Label x:Name="Category_2" Grid.Row="0" Grid.Column="1" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat2Clue1" Grid.Row="1" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat2Clue2" Grid.Row="2" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat2Clue3" Grid.Row="3" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat2Clue4" Grid.Row="4" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat2Clue5" Grid.Row="5" Grid.Column="1" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+            <Label x:Name="Category_3" Grid.Row="0" Grid.Column="2" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat3Clue1"  Grid.Row="1" Grid.Column="2" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat3Clue2"  Grid.Row="2" Grid.Column="2" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat3Clue3"  Grid.Row="3" Grid.Column="2" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat3Clue4"  Grid.Row="4" Grid.Column="2" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat3Clue5"  Grid.Row="5" Grid.Column="2" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+            <Label x:Name="Category_4" Grid.Row="0" Grid.Column="3" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat4Clue1" Grid.Row="1" Grid.Column="3" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat4Clue2" Grid.Row="2" Grid.Column="3" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat4Clue3" Grid.Row="3" Grid.Column="3" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat4Clue4" Grid.Row="4" Grid.Column="3" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat4Clue5" Grid.Row="5" Grid.Column="3" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+            <Label x:Name="Category_5" Grid.Row="0" Grid.Column="4" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat5Clue1"  Grid.Row="1" Grid.Column="4" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat5Clue2"  Grid.Row="2" Grid.Column="4" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat5Clue3"  Grid.Row="3" Grid.Column="4" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat5Clue4"  Grid.Row="4" Grid.Column="4" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat5Clue5"  Grid.Row="5" Grid.Column="4" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+            <Label x:Name="Category_6" Grid.Row="0" Grid.Column="5" Margin="5" Background="#FF060CE9" Foreground="White" FontSize="20" FontFamily="Arial Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Label>
+            <Button x:Name="Cat6Clue1"  Grid.Row="1" Grid.Column="5" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat6Clue2"  Grid.Row="2" Grid.Column="5" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat6Clue3"  Grid.Row="3" Grid.Column="5" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat6Clue4"  Grid.Row="4" Grid.Column="5" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+            <Button x:Name="Cat6Clue5"  Grid.Row="5" Grid.Column="5" Margin="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="genButtonClick" Foreground="White" FontSize="16" FontFamily="Arial Black" Background="#FF060CE9" SnapsToDevicePixels="True">
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+            </Button>
+
+        </Grid>
+        <Button x:Name="FinClue" Margin="0,20,0,0" Panel.ZIndex="-1" Click="FJ_Click" Foreground="White" Background="#FF060CE9" FontSize="40">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="jeopardy.DBSelection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jeopardy"
+        mc:Ignorable="d"
+        Title="DBSelection" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" Margin="45,45,32,59" SelectionChanged="dataGrid_SelectionChanged" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" GridLinesVisibility="Horizontal" SelectionMode="Single" />
+        <Button x:Name="Load" Content="Load Game" HorizontalAlignment="Center" Height="40" Margin="0,225,0,0" VerticalAlignment="Bottom" Width="75" Click="Load_Click"/>
+
+    </Grid>
+</Window>
