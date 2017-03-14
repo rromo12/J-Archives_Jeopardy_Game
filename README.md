@@ -1,7 +1,7 @@
 # J-Archives_Jeopardy_Game
 Scrapes j-Archives providing a more polished interface to view old jeopardy games
 
-#Usage:
+# Usage:
 
 1.) Download and unzip Jeopardy V0.1.zip
 
@@ -18,5 +18,13 @@ Scrapes j-Archives providing a more polished interface to view old jeopardy game
 5.) To see the answer to a clue click it
 
 6.) To change round select desired round From File Menu
+
+# Screenshots:
+### Board
+![](https://github.com/rromo12/J-Archives_Jeopardy_Game/blob/master/Screenshots/JeopardyBoard2.JPG?raw=true)
+### Main Menu
+![](https://github.com/rromo12/J-Archives_Jeopardy_Game/blob/master/Screenshots/JeopardyMM.PNG?raw=true)
+### DB Select By Airdate
+![](https://github.com/rromo12/J-Archives_Jeopardy_Game/blob/master/Screenshots/JeopardyDB.JPG?raw=true)
 
 
